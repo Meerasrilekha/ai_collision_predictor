@@ -106,12 +106,7 @@ class _ARVisualizationPageState extends State<ARVisualizationPage>
             onScaleUpdate: (details) {
               setState(() {
                 _scale = details.scale.clamp(0.5, 2.0);
-                _offset = details.focalPointDelta;
-              });
-            },
-            onPanUpdate: (details) {
-              setState(() {
-                _offset += details.delta;
+                _offset += details.focalPointDelta;
               });
             },
             onDoubleTap: () {
